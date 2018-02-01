@@ -8,7 +8,7 @@ const ONE_DAY = 1000 * 60 * 60 * 24;
 const token = process.env.GITHUB_TOKEN;
 const username = process.env.GITHUB_USERNAME;
 const origin = process.env.ACCESS_ALLOW_ORIGIN;
-const orderBy = process.env.ORDER_BY || 'CREATED_AT';
+const orderBy = process.env.ORDER_BY;
 const maxRepos = Number(process.env.MAX_REPOS) || 6;
 
 if (!token) {
@@ -32,7 +32,7 @@ const query = `
 				affiliations: OWNER,
 				privacy: PUBLIC,
 				orderBy: {
-					field: "${orderBy}",
+					field: ${orderBy},
 					direction: DESC
 				}
 			) {
