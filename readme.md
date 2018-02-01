@@ -13,12 +13,12 @@ It returns the latest repos along with some metadata. The result is cached for a
 
 ### With [`now`](https://now.sh)
 
-[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/sindresorhus/gh-latest-repos&env=GITHUB_TOKEN&env=GITHUB_USERNAME&env=ACCESS_ALLOW_ORIGIN&env=MAX_REPOS)
+[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/ahmadassaf/github-latest-repos&env=GITHUB_TOKEN&env=GITHUB_USERNAME&env=ACCESS_ALLOW_ORIGIN&env=MAX_REPOS)
 
 or
 
 ```
-$ now sindresorhus/gh-latest-repos -e NODE_ENV=production -e GITHUB_TOKEN=xxx -e GITHUB_USERNAME=xxx -e ACCESS_ALLOW_ORIGIN=xxx -e MAX_REPOS=xxx
+$ now ahmadassaf/github-latest-repos -e NODE_ENV=production -e GITHUB_TOKEN=xxx -e GITHUB_USERNAME=xxx -e ACCESS_ALLOW_ORIGIN=xxx -e MAX_REPOS=xxx
 ```
 
 ### Manual
