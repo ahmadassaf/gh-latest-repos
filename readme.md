@@ -37,7 +37,7 @@ Deploy to your hosting provider, set the below environment variables, and start 
 Alternatively, you can deploy it to [Now](https://zeit.co/now) [![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/ahmadassaf/github-latest-repos&env=GITHUB_TOKEN&env=GITHUB_USERNAME&env=ACCESS_ALLOW_ORIGIN&env=MAX_REPOS):
 
  - Install Now and its command line
- - Execute `NODE_ENV=production -e GITHUB_TOKEN=ba6d2939f0ca64a1fb89cdf3a2c9078ffa7a88d9 -e GITHUB_USERNAME=ahmadassaf -e ACCESS_ALLOW_ORIGIN=ahmadassaf.com -e ORDERBY=STARGAZERS`
+ - Execute `NODE_ENV=production -e GITHUB_TOKEN=XXXX -e GITHUB_USERNAME=ahmadassaf -e ACCESS_ALLOW_ORIGIN=ahmadassaf.com -e ORDERBY=STARGAZERS`
 
 ### Environment variables
 
