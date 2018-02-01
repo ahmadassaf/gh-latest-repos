@@ -1,12 +1,15 @@
 'use strict';
+
 const graphqlGot = require('graphql-got');
 const controlAccess = require('control-access');
+
+const ONE_DAY = 1000 * 60 * 60 * 24;
 
 const token = process.env.GITHUB_TOKEN;
 const username = process.env.GITHUB_USERNAME;
 const origin = process.env.ACCESS_ALLOW_ORIGIN;
+const orderBy = process.env.ORDER_BY || 'CREATED_AT';
 const maxRepos = Number(process.env.MAX_REPOS) || 6;
-const ONE_DAY = 1000 * 60 * 60 * 24;
 
 if (!token) {
 	throw new Error('Please set your GitHub token in the `GITHUB_TOKEN` environment variable');
@@ -24,13 +27,13 @@ const query = `
 	query {
 		user(login: "${username}") {
 			repositories(
-				last: ${maxRepos},
+				first: 6,
 				isFork: false,
 				affiliations: OWNER,
 				privacy: PUBLIC,
 				orderBy: {
-					field: CREATED_AT,
-					direction: ASC
+					field: "${orderBy}",
+					direction: DESC
 				}
 			) {
 				nodes {
