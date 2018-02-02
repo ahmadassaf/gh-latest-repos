@@ -48,7 +48,7 @@ Define the following environment variables:
 - `GITHUB_TOKEN` - [Personal access token.](https://github.com/settings/tokens/new?description=gh-latest-repos)
 - `GITHUB_USERNAME` - The username you like to get repos from.
 - `ACCESS_ALLOW_ORIGIN` - The URL of your website or `*` if you want to allow any origin (not recommended), for the `Access-Control-Allow-Origin` header.
-- `ORDERBY` - The ordering of the repos to be returned. Defaults to `CREATED_AT` (the full list of valid options are [documented here](https://developer.github.com/v4/enum/repositoryorderfield/))
+- `ORDER_BY` - The ordering of the repos to be returned. Defaults to `CREATED_AT` (the full list of valid options are [documented here](https://developer.github.com/v4/enum/repositoryorderfield/))
 - `MAX_REPOS` - The number of repos returned. Optional. Defaults to 6.
 
 ## License
