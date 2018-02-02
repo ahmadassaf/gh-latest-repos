@@ -1,6 +1,6 @@
-# github-latest-repos
+# github-repos-list
 
-Microservice to get the latest public GitHub repos from a user with caching mechanism. 
+Microservice to get a list of public GitHub repos from a user with caching mechanism. The list is ordered by an ENV variable passed to the deploy command and defaults to the latest list of repos. 
 
 In case you wanted to query Github for your latest repositories but do not want to waste API calls, then you can use this microservices that will query return the latest (or any other `ORDERBY` order) repos along with some metadata where the result is cached for a day.
 ## Example response
@@ -34,7 +34,9 @@ In case you wanted to query Github for your latest repositories but do not want 
 
 Deploy to your hosting provider, set the below environment variables, and start it with `npm start` e.g., `GITHUB_TOKEN=XXX GITHUB_USERNAME=XXX ACCESS_ALLOW_ORIGIN=XXX npm start`
 
-Alternatively, you can deploy it to [Now](https://zeit.co/now) [![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/ahmadassaf/github-latest-repos&env=GITHUB_TOKEN&env=GITHUB_USERNAME&env=ACCESS_ALLOW_ORIGIN&env=MAX_REPOS):
+Alternatively, you can deploy it to [Now](https://zeit.co/now)
+
+[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/ahmadassaf/github-latest-repos&env=GITHUB_TOKEN&env=GITHUB_USERNAME&env=ACCESS_ALLOW_ORIGIN&env=MAX_REPOS):
 
  - Install Now and its command line
  - Execute `NODE_ENV=production -e GITHUB_TOKEN=XXXX -e GITHUB_USERNAME=ahmadassaf -e ACCESS_ALLOW_ORIGIN=ahmadassaf.com -e ORDERBY=STARGAZERS`
